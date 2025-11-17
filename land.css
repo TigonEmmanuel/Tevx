@@ -816,6 +816,12 @@ img {
     display: flex;
     flex-direction: row;
   }
+
+  .footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
 }
 
 /* Medium screens (tablets / small laptops) */
