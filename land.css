@@ -24,6 +24,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.tevx {
+  color: #60269e;
+}
+
 /* images responsive */
 img {
   max-width: 100%;
