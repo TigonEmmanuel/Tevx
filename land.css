@@ -672,11 +672,17 @@ img {
   color: rgba(234, 236, 240, 0.9);
 }
 
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
 /* footer link blocks */
 .footerlinks,
 .footersocial {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   gap: 0.6rem;
 }
 
