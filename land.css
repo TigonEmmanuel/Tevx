@@ -769,6 +769,12 @@ img {
   .container {
     grid-template-columns: 1fr;
   }
+
+  .footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
 }
 
 /* Phones & small tablets */
