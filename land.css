@@ -563,6 +563,12 @@ img {
   margin-top: 0.5rem;
 }
 
+.component1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 /* mentor card */
 .mentor-descri {
   width: 100%;
@@ -653,6 +659,13 @@ img {
   gap: 0.6rem;
 }
 
+.hi {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  gap: 0.6rem;
+}
+
 .sample-logo {
   width: 40px;
   height: 40px;
@@ -664,7 +677,7 @@ img {
   font-size: 1.6rem;
   font-weight: 700;
   color: #fff;
-  margin-top: -18px;
+  /* margin-top: -18px; */
 }
 
 .s-l-t {
