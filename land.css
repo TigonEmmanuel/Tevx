@@ -756,11 +756,11 @@ img {
   }
 
   .fun-fact2 {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 
   .story1 {
-    flex-direction: column;
+    flex-direction: row;
   }
 
   .container {
