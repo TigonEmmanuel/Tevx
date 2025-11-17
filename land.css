@@ -780,6 +780,10 @@ img {
     grid-template-columns: 1fr;
   }
 
+  .contact-dics {
+    grid-template-rows: 1fr 1fr;
+  }
+
   .footer {
     display: flex;
     flex-direction: row;
