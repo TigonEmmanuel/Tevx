@@ -1,0 +1,861 @@
+/* ===========================
+   Responsive land.css (All original classes preserved)
+   Option A — Full fluid responsiveness
+   =========================== */
+
+/* ---------- Base / Resets ---------- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  color: #111;
+  background: #fafafa;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* images responsive */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Utility container used across site */
+.responsive-wrapper {
+  width: 100%;
+  max-width: 1920px; /* keeps large-screen design intact */
+  margin: 0 auto;
+  overflow-x: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+/* ---------- Info name ---------- */
+.info-name {
+  max-width: 100%;
+  color: #606060;
+  font-family: "Nunito", sans-serif;
+  font-size: clamp(0.85rem, 1.2vw, 1rem);
+  text-align: center;
+  margin: 0.5rem auto;
+}
+
+/* ---------- Header / Navbar ---------- */
+.header {
+  width: 100%;
+  background-color: #f8f3fd;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 0.8rem 5%;
+  gap: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+/* left section */
+.left-section {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  min-width: 0;
+}
+
+/* brand/title */
+.name-dev {
+  font-weight: 800;
+  font-size: clamp(1.2rem, 2.4vw, 2.2rem);
+  line-height: 1;
+}
+
+/* middle navigation - will collapse on small screens */
+.middle-section {
+  display: flex;
+  gap: clamp(0.6rem, 1.4vw, 1.6rem);
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  min-width: 0;
+}
+
+/* keep individual nav items (preserve original classes) */
+.middle-section1,
+.middle-section2,
+.middle-section3,
+.middle-section4,
+.middle-section5,
+.middle-section6 {
+  font-family: "Nunito", sans-serif;
+  font-weight: 500;
+  font-size: clamp(0.9rem, 1.2vw, 1.125rem);
+  color: #000;
+  line-height: 1;
+  white-space: nowrap;
+  padding: 0.4rem 0.35rem;
+}
+
+/* nav hover */
+.middle-section1:hover,
+.middle-section2:hover,
+.middle-section3:hover,
+.middle-section4:hover,
+.middle-section5:hover,
+.middle-section6:hover {
+  color: #005bff;
+  cursor: pointer;
+  transition: color 0.18s ease;
+}
+
+/* end section (auth buttons) */
+.end-section {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  justify-content: flex-end;
+  min-width: 0;
+}
+
+/* sign-in and sign-up containers */
+.sign-in-container,
+.sign-up-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* sign-in text */
+.sign-in {
+  font-weight: 500;
+  font-size: clamp(0.9rem, 1.1vw, 1.125rem);
+  color: #000;
+  padding: 0.35rem 0.5rem;
+}
+
+/* sign-up button style */
+.sign-up-container {
+  background-color: #60269e;
+  border-radius: 8px;
+  padding: 0.35rem 0.6rem;
+  align-items: center;
+}
+
+.sign-up {
+  color: #fff;
+  font-weight: 600;
+  font-size: clamp(0.9rem, 1.1vw, 1.125rem);
+}
+
+/* ---------- Body wrapper ---------- */
+.body {
+  display: block; /* keep flow natural, wrapper used for container */
+  width: 100%;
+}
+
+/* ---------- HERO ---------- */
+.Hero {
+  width: 100%;
+  padding: clamp(2rem, 6vw, 6rem) 5%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  background: linear-gradient(180deg, #f4f6ff 0%, #eef3ff 100%);
+  text-align: center;
+}
+
+/* small pill intro */
+.Hero-intro {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  border: 1px solid #60269e;
+  padding: 0.5rem 0.9rem;
+  font-size: clamp(0.9rem, 1.2vw, 1rem);
+}
+
+/* welcome text */
+.welcome {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 400;
+  font-size: clamp(0.9rem, 1.2vw, 1.1rem);
+  padding: 0.35rem 0.6rem;
+}
+
+/* hero main heading - responsive sizing */
+.Hero-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: min(1100px, 100%);
+}
+
+.main1 {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  font-size: clamp(2rem, 5.6vw, 4.7rem); /* scales from mobile to desktop */
+  text-align: center;
+  line-height: 1.02;
+  margin-top: 0.5rem;
+}
+
+.main2 {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 400;
+  font-size: clamp(1rem, 1.6vw, 1.4rem);
+  color: #333;
+  text-align: center;
+  width: min(900px, 95%);
+  margin-top: 0.75rem;
+}
+
+/* CTA */
+.get {
+  display: inline-block;
+  margin-top: 1rem;
+  background: #60269e;
+  color: #fff;
+  padding: 0.75rem 1.25rem;
+  border-radius: 16px;
+  font-weight: 700;
+  font-size: clamp(0.95rem, 1.2vw, 1.125rem);
+  text-align: center;
+}
+
+/* ---------- FUN FACT ---------- */
+.fun-fact {
+  width: 100%;
+  padding: clamp(2rem, 5vw, 4rem) 5%;
+  background: #f7f0ff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.fun-fact1 {
+  font-size: clamp(1.25rem, 2.6vw, 2.5rem);
+  font-weight: 700;
+  text-align: center;
+}
+
+.fun-fact2 {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: clamp(0.8rem, 1.6vw, 1.5rem);
+  align-items: center;
+  justify-items: center;
+  margin-top: 0.5rem;
+}
+
+.image1 {
+  width: clamp(40px, 8vw, 110px);
+  height: auto;
+  border-radius: 8px;
+}
+
+.image1-des {
+  text-align: center;
+}
+
+/* info small uppercase */
+.info {
+  font-weight: 700;
+  font-size: clamp(0.7rem, 1vw, 0.95rem);
+  text-transform: uppercase;
+  color: #5e00d0;
+}
+
+/* ---------- STORIES ---------- */
+.stories {
+  width: 100%;
+  padding: clamp(2rem, 5vw, 5rem) 5%;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.story1 {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  gap: 2.5rem;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* store1 column */
+.store1 {
+  flex: 1 1 360px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: flex-start;
+  min-width: 280px;
+  padding: 0 1rem;
+}
+
+/* store2 image area */
+.store2 {
+  flex: 1 1 360px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+/* typographic styles preserved */
+.lod {
+  font-size: clamp(1.4rem, 3.6vw, 3rem);
+  font-weight: 700;
+}
+
+.lod2 {
+  font-size: clamp(1.05rem, 1.6vw, 1.5rem);
+  font-weight: 700;
+}
+
+.lod21 {
+  color: #60269e;
+}
+
+.lod3 {
+  font-size: clamp(0.95rem, 1.6vw, 1.2rem);
+  color: #222;
+}
+
+/* story-mid - centered */
+.story-mid {
+  font-size: clamp(1.25rem, 2.8vw, 2.5rem);
+  font-weight: 700;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+/* ---------- COMPONENT 1 (What sets us apart) ---------- */
+.component1 {
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 1.5rem;
+  border-radius: 12px;
+  background: #f7f0ff;
+  padding: clamp(1.2rem, 2.6vw, 2.4rem);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.forward,
+.backward {
+  display: none; /* removed absolute side images to keep fluid layout; they can be shown responsively if needed */
+}
+
+.sch1 {
+  font-size: clamp(1.1rem, 2.6vw, 1.9rem);
+  font-weight: 700;
+  text-align: center;
+  margin-top: 0;
+}
+
+.sch2 {
+  font-size: clamp(0.95rem, 1.4vw, 1.15rem);
+  color: #000000b2;
+  text-align: center;
+}
+
+/* On larger screens show two-column layout for component1 content */
+@media (min-width: 900px) {
+  .component1 {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+
+  .sch1 {
+    grid-column: 1 / -1;
+  }
+
+  .sch2 {
+    grid-column: 1 / -1;
+  }
+}
+
+/* ---------- JOIN CONTAINER ---------- */
+.join-container {
+  width: 100%;
+  padding: clamp(2rem, 5vw, 4rem) 5%;
+  background: #f7f0ff;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+/* join rows */
+.join-container1 {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0 1rem;
+}
+
+.frame1 {
+  flex: 1 1 420px;
+  min-width: 260px;
+  padding: 0.5rem;
+}
+
+.para1 {
+  font-size: clamp(1.4rem, 3.2vw, 2.4rem);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.para2 {
+  font-size: clamp(0.95rem, 1.4vw, 1.1rem);
+  color: #222;
+}
+
+/* join images */
+.joinimg {
+  flex: 1 1 320px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+/* positioned small elements made fluid */
+.img080,
+.img082 {
+  position: relative;
+  width: clamp(60px, 8vw, 160px);
+  margin: 0.25rem;
+  top: 0;
+  left: 0;
+}
+
+/* join-container2 (purple block) */
+.join-container2 {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  border-radius: 20px;
+  background: #60269e;
+  color: #fff;
+  gap: 1.5rem;
+  padding: clamp(1.2rem, 2.4vw, 2.4rem);
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* color block small */
+.color {
+  width: 72px;
+  height: 36px;
+  background: #7a3dc5;
+  border-radius: 8px;
+}
+
+/* text area inside purple */
+.div1 {
+  flex: 1 1 420px;
+  color: #fff;
+  padding: 0.5rem;
+}
+
+.main-div1 {
+  font-size: clamp(1.4rem, 3.2vw, 2.6rem);
+  font-weight: 700;
+}
+
+.main-div2 {
+  font-size: clamp(0.9rem, 1.4vw, 1.05rem);
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* button area */
+.main-div3 {
+  display: inline-block;
+  background: #fff0;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  margin-top: 0.8rem;
+}
+
+/* CTA text inside purple */
+.tigon {
+  color: #fff;
+  font-size: clamp(0.95rem, 1.2vw, 1rem);
+}
+
+/* image-group */
+.img-group {
+  flex: 1 1 320px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+/* ---------- MENTORS ---------- */
+.mentor-container {
+  width: 100%;
+  padding: clamp(2rem, 5vw, 4rem) 5%;
+  background: #f8f3fd;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+.our-mentors {
+  text-align: center;
+  max-width: 960px;
+}
+
+.our-hero {
+  font-size: clamp(1.6rem, 3.2vw, 2.6rem);
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.our-hero2 {
+  font-size: clamp(0.95rem, 1.4vw, 1.05rem);
+  color: #555;
+  margin: 0 auto;
+}
+
+/* contact-dics becomes responsive grid of mentor cards */
+.contact-dics {
+  width: 100%;
+  max-width: 1100px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+/* mentor card */
+.mentor-descri {
+  width: 100%;
+  height: auto;
+  padding: 1rem;
+  background: #fff;
+  border-radius: 14px;
+  border: 1px solid rgba(128, 128, 128, 0.6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.mentor-descri:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* image inside mentor */
+.metor-descri-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 0.6rem;
+}
+
+.info-para1 {
+  font-weight: 700;
+  font-size: clamp(0.95rem, 1.6vw, 1.1rem);
+  text-align: center;
+}
+
+.role {
+  color: var(--brand-color, #5e00d0);
+  margin-top: 0.25rem;
+  font-size: clamp(0.85rem, 1.2vw, 1rem);
+}
+
+.role1 {
+  color: #555;
+  margin-top: 0.5rem;
+  font-size: clamp(0.85rem, 1.1vw, 0.95rem);
+  text-align: center;
+}
+
+/* social icons container */
+.locate {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.6rem;
+}
+
+.class1,
+.class2 {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+/* ---------- FOOTER ---------- */
+.footer {
+  width: 100%;
+  background: #101828;
+  color: #fff;
+  padding: clamp(2rem, 4vw, 3.5rem) 5%;
+}
+
+.section {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  display: block;
+  padding-bottom: 0.5rem;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.logo-support-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.sample-logo {
+  width: 40px;
+  height: 40px;
+  border: 8px solid #7f56d9;
+  border-radius: 50%;
+}
+
+.sample-logo-text {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #fff;
+  margin-top: -18px;
+}
+
+.s-l-t {
+  font-size: 0.95rem;
+  color: rgba(234, 236, 240, 0.9);
+}
+
+/* footer link blocks */
+.footerlinks,
+.footersocial {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.link1,
+.social1 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.loonk,
+.loka {
+  color: rgba(234, 236, 240, 0.9);
+  font-size: 0.95rem;
+}
+
+/* bottom copyright row */
+.emma {
+  width: 100%;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  padding-top: 1rem;
+  margin-top: 1rem;
+  color: #fff;
+}
+
+/* social row inside footer */
+.last {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* icons sizing */
+.tech-bro,
+.tech-bro1,
+.tech-bro2,
+.tech-bro3,
+.tech-bro4 {
+  width: clamp(22px, 4vw, 36px);
+  height: auto;
+}
+
+/* mentor avatar */
+.aba1 {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* ---------- SMALL BREAKPOINTS & TWEAKS ---------- */
+
+/* Very small phones */
+@media (max-width: 420px) {
+  .header {
+    padding: 0.6rem 12px;
+  }
+
+  .name-dev {
+    font-size: 1.1rem;
+  }
+
+  .main1 {
+    font-size: clamp(1.4rem, 6.2vw, 2rem);
+  }
+
+  .main2 {
+    font-size: 0.95rem;
+  }
+
+  .middle-section {
+    display: none; /* hide nav for smallest screens */
+  }
+
+  .end-section {
+    display: none;
+  }
+
+  .fun-fact2 {
+    grid-template-columns: 1fr;
+  }
+
+  .story1 {
+    flex-direction: column;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Phones & small tablets */
+@media (min-width: 421px) and (max-width: 900px) {
+  .middle-section {
+    display: flex;
+    gap: 0.7rem;
+    justify-content: center;
+  }
+
+  .end-section {
+    display: none; /* hide sign up / sign in to save space */
+  }
+
+  .main1 {
+    font-size: clamp(1.6rem, 6vw, 2.2rem);
+  }
+
+  .img080,
+  .img082 {
+    width: clamp(50px, 12vw, 120px);
+  }
+
+  .frame1,
+  .joinimg {
+    flex: 1 1 100%;
+  }
+
+  .join-container2 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .section .container {
+    gap: 1rem;
+  }
+}
+
+/* Medium screens (tablets / small laptops) */
+@media (min-width: 901px) and (max-width: 1200px) {
+  .header {
+    padding: 0.8rem 4%;
+  }
+
+  .middle-section {
+    gap: 1rem;
+  }
+
+  .main1 {
+    font-size: clamp(2rem, 4.2vw, 3rem);
+  }
+
+  .component1 {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .contact-dics {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Large desktops - keep more spacing and larger fonts */
+@media (min-width: 1201px) {
+  .responsive-wrapper {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .main1 {
+    font-size: clamp(2.8rem, 4.6vw, 4.7rem);
+  }
+
+  .container {
+    gap: 2rem;
+  }
+
+  .fun-fact2 {
+    gap: 2rem;
+  }
+}
+
+/* final minor helpers - clickable area for nav anchor-like p elements */
+.middle-section p,
+.middle-section a {
+  cursor: pointer;
+}
+
+/* ensure hidden inline anchors behave well */
+.middle-section a p {
+  margin: 0;
+}
+
+/* End of responsive land.css */
