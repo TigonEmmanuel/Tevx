@@ -63,7 +63,7 @@ img {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 1000;
   padding: 0.8rem 5%;
@@ -363,8 +363,11 @@ img {
   border-radius: 12px;
   background: #f7f0ff;
   padding: clamp(1.2rem, 2.6vw, 2.4rem);
-  display: grid;
-  grid-template-columns: 1fr;
+  /* display: grid; */
+  /* grid-template-columns: 1fr; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   gap: 1rem;
 }
 
@@ -563,11 +566,11 @@ img {
   margin-top: 0.5rem;
 }
 
-.component1 {
+/* .component1 {
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
+} */
 
 /* mentor card */
 .mentor-descri {
